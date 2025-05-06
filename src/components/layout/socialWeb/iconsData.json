@@ -1,0 +1,23 @@
+[
+  {
+    "to": "https://www.instagram.com/smttalagoinhas?igsh=MWp0MzV6Mml2bHJ5aw==",
+    "target": "_blank",
+    "src": "/src/components/img/insta-icon-color.svg",
+    "src2": "/src/components/img/insta-icon90px.svg",
+    "alt": "Ícone do Instagram"
+  },
+  {
+    "to": "https://www.facebook.com/SMTTALAGOINHAS",
+    "target": "_blank",
+    "src": "/src/components/img/face-icon-color.svg",
+    "src2": "/src/components/img/face-icon90px.svg",
+    "alt": "Ícone do Facebook"
+  },
+  {
+    "to": "https://api.whatsapp.com/send/?phone=75999997536&text&type=phone_number&app_absent=0",
+    "target": "_blank",
+    "src": "/src/components/img/whatsapp-icon-color.svg",
+    "src2": "/src/components/img/whatsapp-icon.svg",
+    "alt": "Ícone do WhatsApp"
+  }
+]

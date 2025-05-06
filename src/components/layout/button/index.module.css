@@ -1,0 +1,155 @@
+.btnStyle {
+  width: 20rem;
+  padding: 1.2rem 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  border: 0.2rem solid var(--additional-color-three);
+  transition: all 0.3s linear;
+}
+
+.btnStyle span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-variant: all-small-caps;
+}
+
+.btnStyle svg {
+  font-size: 1.8rem;
+}
+
+.btnColor {
+  background: var(--gradiente-x);
+  color: var(--additional-color-two);
+}
+
+.btnBorder {
+  background: var(--secondary-color);
+}
+
+.btnBorder span {
+  background: var(--gradiente-x);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.btnBorderRadius {
+  background: var(--secondary-color);
+  border-radius: 5rem;
+}
+
+.btnBorderRadius span {
+  background: var(--gradiente-x);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btnColorRadius {
+  background: var(--gradiente-x);
+  color: var(--additional-color-two);
+  border-radius: 5rem;
+}
+
+.btnStyle:hover {
+  scale: 1.01;
+}
+
+.btnAsk {
+  width: 100%;
+  background: var(--gradiente-y);
+  color: var(--additional-color-two);
+  border-radius: 0;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.btnAsk span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-variant: normal;
+  text-align: left;
+}
+
+.btnReturnNews {
+  display: flex;
+  flex-direction: row-reverse;
+  background: var(--secondary-color);
+  border-radius: 5rem;
+  width: 22rem;
+}
+
+.btnReturnNews span {
+  background: var(--gradiente-x);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.btnReturnNews svg {
+  transform: rotate(180deg);
+  font-size: 4rem;
+  color: var(--additional-color-three);
+}
+
+.btnAsk svg {
+  transform: rotate(90deg);
+}
+
+.btnTransparencia {
+  width: 100%;
+  border-radius: 5rem;
+  background: var(--gradiente-y);
+  color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnTransparencia span {
+  border-bottom: 0.1rem solid var(--secondary-color);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  margin: 0 1rem;
+  text-transform: uppercase;
+  font-variant: normal;
+  font-size: 1.5rem;
+}
+
+.btnBorderRadiusSocial {
+  background: var(--secondary-color);
+  border-radius: 5rem;
+  width: 24.5rem;
+}
+
+.btnBorderRadiusSocial span {
+  background: var(--gradiente-x);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.buttonMap {
+  width: 26rem;
+}
+
+.buttonMapChild {
+  width: 19rem;
+}
+
+.btnSearch {
+  width: 5rem;
+  padding: 0.8rem 0.5rem;
+}
+
+.btnLegislacao {
+  text-align: center;
+}

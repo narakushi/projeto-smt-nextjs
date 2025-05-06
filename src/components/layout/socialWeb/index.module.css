@@ -1,0 +1,61 @@
+.iconsTextsSocial {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  -webkit-user-select: none; /* Evita a seleção de texto no Safari */
+  -moz-user-select: none; /* Evita a seleção de texto no Firefox */
+  -ms-user-select: none;
+}
+
+.iconsTextsSocial span {
+  max-width: 14rem;
+  text-align: center;
+  font-variant: all-small-caps;
+}
+
+.iconsSocial {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.iconsSocial img {
+  width: 3rem;
+  transition: all .5s linear;
+}
+
+.iconsSocial a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconsTextsSocial2 {
+  min-height: 25rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+} 
+
+.iconsTextsSocial2 span{
+  max-width: 20rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  font-variant: normal;
+}
+
+.iconsTextsSocial2 .iconsSocial {
+  gap: 2rem;
+}
+
+.iconsTextsSocial2 .iconsSocial img {
+  width: 5rem;
+}
+
+.iconsTextsSocial .iconsSocial img:hover {
+  scale: 0.9;
+}

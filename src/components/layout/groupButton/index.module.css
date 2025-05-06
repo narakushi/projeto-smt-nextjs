@@ -1,0 +1,24 @@
+.buttonHeaderContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 2;
+}
+
+.containerButton, .buttonDropDown2 {
+    position: relative;
+}
+
+.buttonDropDown1, .buttonDropDown2 {
+    display: none;
+    position: absolute;
+}
+
+.containerButton:hover .buttonDropDown1{
+    display: block;
+}
+
+.containerButton2:hover .buttonDropDown2 {
+    display: block;
+}
+
