@@ -1,7 +1,7 @@
 import { saveFontsAcc } from "../saveFontsAcc";
 
 //Coleta os dados iniciais da página e salva os cookies
-export function MapFontsPage(tags, Cookies) {
+export function mapFontsPage(tags, Cookies) {
   const originalSize = {};
   tags.forEach((tag) => {
     const selectors = document.querySelectorAll(tag);

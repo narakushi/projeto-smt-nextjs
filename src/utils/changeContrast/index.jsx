@@ -2,7 +2,7 @@ import { saveContrast } from "../saveContrast";
 
 //Reponsável por alterar o contraste
 export function changeContrast(Cookies, contrast, setContrast) {
-  const root = document.querySelector("#root");
+  const root = document.querySelector("#__next");
   if (!contrast) {
     root.classList.add("contrast");
     setContrast(true);
