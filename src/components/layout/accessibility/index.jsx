@@ -2,13 +2,27 @@ import styles from "./index.module.css";
 import { BtnAcc } from "../btnAcc";
 import { FaAccessibleIcon, FaSitemap, FaAdjust } from "react-icons/fa";
 import Esic from "@/../public/e-sic.svg";
+import { MapFontsPage } from "@/utils/mapFontsPage";
+import { useEffect } from "react";
+import Cookies from "js-cookie";
+import { handleClickAcessibility } from "@/utils/handleClickAcessibility";
 
 export function Accessibility() {
   const tags = ["h1", "h2", "h3", "p", "span", "a", "th", "td", "label", "li"];
 
+  useEffect(() => {
+    if (!Cookies.get("originalSize")) {
+      MapFontsPage(tags, Cookies);
+    }
+  }, [MapFontsPage]);
+
   return (
     <div className={styles.btnAccessibillity}>
-      <BtnAcc title="Aumentar fonte" icon={"A+"} />
+      <BtnAcc
+        title="Aumentar fonte"
+        icon={"A+"}
+        event={() => handleClickAcessibility(tags, "aumentar", Cookies, true)}
+      />
       <BtnAcc title="Diminuir fonte" icon={"A-"} />
       <BtnAcc title="Fonte padrão" icon={"A"} />
       <BtnAcc title="Contraste" icon={<FaAdjust />} />
