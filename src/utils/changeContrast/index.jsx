@@ -1,4 +1,4 @@
-import { SaveContrast } from "../saveContrast";
+import { saveContrast } from "../saveContrast";
 
 //Reponsável por alterar o contraste
 export function changeContrast(Cookies, contrast, setContrast) {
@@ -13,7 +13,7 @@ export function changeContrast(Cookies, contrast, setContrast) {
   //Salva o contraste nos Cookies
   if (Cookies.get("choiceCookie")) {
     if (JSON.parse(Cookies.get("choiceCookie"))) {
-      SaveContrast(Cookies, "contrast", !contrast, 1);
+      saveContrast(Cookies, "contrast", !contrast, 1);
     }
   }
 }
