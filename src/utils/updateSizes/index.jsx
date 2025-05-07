@@ -1,6 +1,6 @@
 //Atualiza os tamanho ao carregar/recarregar a página
 
-export function UpdateSizes(tags, Cookies, action, contrast, setContrast) {
+export function updateSizes(tags, Cookies, action, contrast, setContrast) {
   let originalSize;
   if (Cookies.get("originalSize")) {
     originalSize = JSON.parse(

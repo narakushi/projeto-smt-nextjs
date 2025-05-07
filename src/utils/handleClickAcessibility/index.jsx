@@ -1,6 +1,6 @@
-import { SaveFontsAcc } from "../saveFontsAcc";
-import { UpdateSizes } from "../updateSizes";
-import { VerifySizeFont } from "../verifySizeFont";
+import { saveFontsAcc } from "../saveFontsAcc";
+import { updateSizes } from "../updateSizes";
+import { verifySizeFont } from "../verifySizeFont";
 
 //ACIONA AÇÕES ATRAVÉS DOS CLICKS
 
@@ -24,9 +24,9 @@ export function handleClickAcessibility(
       size = parseInt(size);
 
       if (action === "aumentar") {
-        size = VerifySizeFont(size, action, tag);
+        size = verifySizeFont(size, action, tag);
       } else if (action === "diminuir") {
-        size = VerifySizeFont(size, action, tag);
+        size = verifySizeFont(size, action, tag);
       }
 
       selector.style.fontSize = `${size}px`;
@@ -37,17 +37,17 @@ export function handleClickAcessibility(
       const originalSize = JSON.parse(Cookies.get("originalSize"));
       if (Cookies.get("choiceCookie")) {
         if (JSON.parse(Cookies.get("choiceCookie"))) {
-          SaveFontsAcc(Cookies, "currentSize", originalSize, 1);
+          saveFontsAcc(Cookies, "currentSize", originalSize, 7);
         }
       }
-      UpdateSizes(tags, Cookies, action, contrast, setContrast);
+      updateSizes(tags, Cookies, action, contrast, setContrast);
     }
   });
 
   if (action != "normalizar") {
     if (Cookies.get("choiceCookie")) {
       if (JSON.parse(Cookies.get("choiceCookie"))) {
-        SaveFontsAcc(Cookies, "currentSize", currentSize, 1);
+        saveFontsAcc(Cookies, "currentSize", currentSize, 1);
       }
     }
   }

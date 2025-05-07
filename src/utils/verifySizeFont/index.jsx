@@ -13,7 +13,7 @@ const tagsMaxMin = {
   li: { min: 12, max: 18 },
 };
 
-export function VerifySizeFont(size, action, tag) {
+export function verifySizeFont(size, action, tag) {
   const { min, max } = tagsMaxMin[tag] || { min: size, max: size };
 
   if (action === "aumentar") {

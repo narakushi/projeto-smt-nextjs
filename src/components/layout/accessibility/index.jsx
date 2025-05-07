@@ -2,30 +2,75 @@ import styles from "./index.module.css";
 import { BtnAcc } from "../btnAcc";
 import { FaAccessibleIcon, FaSitemap, FaAdjust } from "react-icons/fa";
 import Esic from "@/../public/e-sic.svg";
-import { MapFontsPage } from "@/utils/mapFontsPage";
-import { useEffect } from "react";
+import { mapFontsPage } from "@/utils/mapFontsPage";
+import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import { handleClickAcessibility } from "@/utils/handleClickAcessibility";
+import { usePathname } from "next/navigation";
+import { updateSizes } from "@/utils/updateSizes";
+import { changeContrast } from "@/utils/changeContrast";
 
 export function Accessibility() {
   const tags = ["h1", "h2", "h3", "p", "span", "a", "th", "td", "label", "li"];
+  const pathname = usePathname();
+  const [contrast, setContrast] = useState(false);
 
   useEffect(() => {
     if (!Cookies.get("originalSize")) {
-      MapFontsPage(tags, Cookies);
+      mapFontsPage(tags, Cookies);
     }
-  }, [MapFontsPage]);
+  }, [mapFontsPage]);
+
+  useEffect(() => {
+    updateSizes(tags, Cookies, "", contrast, setContrast);
+  }, [pathname]);
 
   return (
     <div className={styles.btnAccessibillity}>
       <BtnAcc
         title="Aumentar fonte"
         icon={"A+"}
-        event={() => handleClickAcessibility(tags, "aumentar", Cookies, true)}
+        event={() =>
+          handleClickAcessibility(
+            tags,
+            "aumentar",
+            Cookies,
+            contrast,
+            setContrast
+          )
+        }
       />
-      <BtnAcc title="Diminuir fonte" icon={"A-"} />
-      <BtnAcc title="Fonte padrão" icon={"A"} />
-      <BtnAcc title="Contraste" icon={<FaAdjust />} />
+      <BtnAcc
+        title="Diminuir fonte"
+        icon={"A-"}
+        event={() =>
+          handleClickAcessibility(
+            tags,
+            "diminuir",
+            Cookies,
+            contrast,
+            setContrast
+          )
+        }
+      />
+      <BtnAcc
+        title="Fonte padrão"
+        icon={"A"}
+        event={() =>
+          handleClickAcessibility(
+            tags,
+            "normalizar",
+            Cookies,
+            contrast,
+            setContrast
+          )
+        }
+      />
+      <BtnAcc
+        title="Contraste"
+        icon={<FaAdjust />}
+        event={() => changeContrast(Cookies, contrast, setContrast)}
+      />
       <BtnAcc title="Mapa do site" icon={<FaSitemap />} to="/sitemap" />
       <BtnAcc
         title="Área de acessibilidade"
