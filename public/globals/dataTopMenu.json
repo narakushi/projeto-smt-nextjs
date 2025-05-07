@@ -1,0 +1,18 @@
+[
+  {
+    "description": "Acessibilidade",
+    "url": "/acessibilidade"
+  },
+  {
+    "description": "Políticas de Privacidade",
+    "url": "/privacidade"
+  },
+  {
+    "description": "Consultar multas",
+    "url": "http://alagoinhas.tivic.com.br:8080/transito/portal/#/pages/home"
+  },
+  {
+    "description": "Ouvidoria",
+    "url": "https://www.gov.br/ouvidorias/pt-br"
+  }
+]

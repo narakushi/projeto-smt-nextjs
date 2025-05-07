@@ -28,7 +28,7 @@
 }
 
 .btnBorder {
-  background: var(--secondary-color);
+  background: var(--additional-color-two);
 }
 
 .btnBorder span {
