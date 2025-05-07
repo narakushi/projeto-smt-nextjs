@@ -1,4 +1,4 @@
-import { SaveFontsAcc } from "../saveFontsAcc";
+import { saveFontsAcc } from "../saveFontsAcc";
 
 //Coleta os dados iniciais da página e salva os cookies
 export function MapFontsPage(tags, Cookies) {
@@ -13,6 +13,6 @@ export function MapFontsPage(tags, Cookies) {
     });
   });
   console.log(originalSize);
-  SaveFontsAcc(Cookies, "originalSize", originalSize, 1);
-  SaveFontsAcc(Cookies, "currentSize", originalSize, 1);
+  saveFontsAcc(Cookies, "originalSize", originalSize, 1);
+  saveFontsAcc(Cookies, "currentSize", originalSize, 1);
 }
